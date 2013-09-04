@@ -1,0 +1,33 @@
+<%- model_class = RailsExceptionHandlerAdmin::ErrorMessage -%>
+<div class="page-header">
+  <h1><%= @error_message.class_name %> - <%= @error_message.message %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:app_name) %>:</strong></dt>
+  <dd><%= @error_message.app_name || '&nbsp;'.html_safe %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:doc_root) %>:</strong></dt>
+  <dd><%= @error_message.doc_root || '&nbsp;'.html_safe %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:user_info) %>:</strong></dt>
+  <dd><%= @error_message.user_info || '&nbsp;'.html_safe %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:target_url) %>:</strong></dt>
+  <dd><%= @error_message.target_url || '&nbsp;'.html_safe %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:referer_url) %>:</strong></dt>
+  <dd><%= @error_message.referer_url || '&nbsp;'.html_safe %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:params) %>:</strong></dt>
+  <dd><%= @error_message.params %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:user_agent) %>:</strong></dt>
+  <dd><%= @error_message.user_agent || '&nbsp;'.html_safe %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:trace) %>:</strong></dt>
+  <dd><%= raw @error_message.trace.try(:split, "\n").try(:join, "<br/>") || '&nbsp;'.html_safe %></dd>
+</dl>
+
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              error_messages_path, :class => 'btn'  %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              error_message_path(@error_message),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>

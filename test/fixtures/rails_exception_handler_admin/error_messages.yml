@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  class_name: MyString
+  message: MyString
+  trace: MyString
+  params: MyString
+  target_url: MyString
+  referer_url: MyString
+  user_agent: MyString
+  user_info: MyString
+  app_name: MyString
+  doc_root: MyString
+  created_at: 2013-09-03
+  updated_at: 2013-09-03
+
+two:
+  class_name: MyString
+  message: MyString
+  trace: MyString
+  params: MyString
+  target_url: MyString
+  referer_url: MyString
+  user_agent: MyString
+  user_info: MyString
+  app_name: MyString
+  doc_root: MyString
+  created_at: 2013-09-03
+  updated_at: 2013-09-03

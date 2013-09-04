@@ -1,0 +1,36 @@
+<%- model_class = RailsExceptionHandlerAdmin::ErrorMessage -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:class_name) %></th>
+      <th><%= model_class.human_attribute_name(:message) %></th>
+      <th><%= model_class.human_attribute_name(:trace) %></th>
+      <th><%= model_class.human_attribute_name(:target_url) %></th>
+      <th><%= model_class.human_attribute_name(:user_info) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @error_messages.each do |error_message| %>
+      <tr>
+        <td><%= link_to error_message.class_name, error_message_path(error_message) %></td>
+        <td><%= error_message.message %></td>
+        <td><%= error_message.trace.try(:split, "\n").try(:first).try(:gsub, Regexp.new(/(.*\/)|(?=:\d+:).*/), '') %></td>
+        <td><%= error_message.target_url %></td>
+        <td><%= error_message.user_info %></td>
+        <td><%=l error_message.created_at %></td>
+        <td>
+          <%= link_to t('.resolved', :default => t("helpers.links.destroy")),
+                      error_message_path(error_message),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
