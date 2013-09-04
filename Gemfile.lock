@@ -12,7 +12,7 @@ PATH
   remote: .
   specs:
     rails_exception_handler_admin (0.0.1)
-      rails (~> 3.2.14)
+      rails (~> 3)
       therubyracer
       twitter-bootstrap-rails
 
