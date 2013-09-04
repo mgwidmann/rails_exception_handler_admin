@@ -5,7 +5,7 @@ module RailsExceptionHandlerAdmin
     # GET /error_messages
     # GET /error_messages.json
     def index
-      @error_messages = params[:app] ? ErrorMessage.where(app_name: params[:app]) : ErrorMessage.all
+      @error_messages = params[:app] ? ErrorMessage.where(app_name: params[:app]).order('created_at DESC') : ErrorMessage.order('created_at DESC')
 
       respond_to do |format|
         format.html # index.html.erb
