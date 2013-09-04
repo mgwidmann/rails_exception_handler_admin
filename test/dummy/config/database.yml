@@ -2,7 +2,7 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: my_apps_exceptions_development
+  database: my_apps_exceptions
   pool: 5
   username: user
   password: password

@@ -46,11 +46,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <%= link_to 'Rails Exception Handler Admin', root_path, class: :brand %>
+          <%= link_to 'Rails Exception Handler Admin', rails_exception_handler_admin.root_path, class: :brand %>
           <div class="container-fluid nav-collapse">
             <ul class="nav">
               <% (RailsExceptionHandlerAdmin::ErrorMessage.uniq.pluck(:app_name) || []).each do |app| %>
-                <li><%= link_to app, error_messages_path(app: app) %></li>
+                <li><%= link_to app, rails_exception_handler_admin.error_messages_path(app: app) %></li>
               <% end %>
             </ul>
           </div><!--/.nav-collapse -->
@@ -72,7 +72,7 @@
           </div><!--/.well -->
         </div><!--/span-->
         <div class="span12">
-          <%= bootstrap_flash %>
+          <%#= bootstrap_flash %>
           <%= yield %>
         </div>
       </div><!--/row-->

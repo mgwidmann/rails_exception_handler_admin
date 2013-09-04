@@ -17,7 +17,7 @@
   <tbody>
     <% @error_messages.each do |error_message| %>
       <tr>
-        <td><%= link_to error_message.class_name, error_message_path(error_message) %></td>
+        <td><%= link_to error_message.class_name, rails_exception_handler_admin.error_message_path(error_message) %></td>
         <td><%= error_message.message %></td>
         <td><%= error_message.trace.try(:split, "\n").try(:first).try(:gsub, Regexp.new(/(.*\/)|(?=:\d+:).*/), '') %></td>
         <td><%= error_message.target_url %></td>
@@ -25,7 +25,7 @@
         <td><%=l error_message.created_at %></td>
         <td>
           <%= link_to t('.resolved', :default => t("helpers.links.destroy")),
-                      error_message_path(error_message),
+                      rails_exception_handler_admin.error_message_path(error_message),
                       :method => :delete,
                       :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
                       :class => 'btn btn-mini btn-danger' %>

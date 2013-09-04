@@ -1,6 +1,6 @@
 class CreateRailsExceptionHandlerAdminErrorMessages < ActiveRecord::Migration
   def change
-    create_table :rails_exception_handler_admin_error_messages do |t|
+    create_table :error_messages do |t|
       t.string :class_name
       t.string :message
       t.string :trace

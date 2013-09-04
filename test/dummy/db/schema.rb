@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(:version => 20130904021511) do
 
-  create_table "rails_exception_handler_admin_error_messages", :force => true do |t|
+  create_table "error_messages", :force => true do |t|
     t.string "class_name"
     t.string "message"
     t.string "trace"
