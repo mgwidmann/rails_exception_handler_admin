@@ -21,4 +21,4 @@ scope constraints: lambda{|req| User.find(session[:current_user_id]).admin? resc
   mount RailsExceptionHandlerAdmin::Engine, :at => '/errors'
 end
 ```
-
+Users who attempt to visit the mounted URL without proper authorization will receive a 404 response.
