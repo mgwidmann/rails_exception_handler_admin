@@ -8,7 +8,7 @@ rails_exception_handler_admin
 Set up and install [rails_exception_handler](https://github.com/Sharagoz/rails_exception_handler) in this or another application.
 Add the line below to your gemfile and run bundler
 ```
-gem 'rails_exception_handler'
+gem 'rails_exception_handler_admin'
 ```
 Mount the rails engine in your application:
 ```
