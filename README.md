@@ -17,7 +17,7 @@ mount RailsExceptionHandlerAdmin::Engine, :at => '/errors'
 To add authentication to this route:
 ```
 # Be sure to customize the lambda to your needs
-scope constraints: lambda{|req| User.find(session[:current_user_id]).admin? rescue false }
+scope constraints: lambda{|req| User.find(session[:current_user_id]).admin? rescue false } do
   mount RailsExceptionHandlerAdmin::Engine, :at => '/errors'
 end
 ```
