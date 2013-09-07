@@ -9,5 +9,6 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require rails_exception_handler_admin/bootstrap.min
  *= require_tree .
  */

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Bootstraptestapp" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Rails Exception Handler Admin" %></title>
     <%= csrf_meta_tags %>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -38,50 +38,29 @@
   </head>
   <body>
 
-    <div class="navbar navbar-fluid-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <%= link_to 'Rails Exception Handler Admin', rails_exception_handler_admin.root_path, class: :brand %>
-          <div class="container-fluid nav-collapse">
-            <ul class="nav">
-              <% (RailsExceptionHandlerAdmin::ErrorMessage.uniq.pluck(:app_name) || []).each do |app| %>
-                <li><%= link_to app, rails_exception_handler_admin.error_messages_path(app: app) %></li>
-              <% end %>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
+    <div class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+        <%= link_to 'Rails Exception Handler Admin', rails_exception_handler_admin.root_path, class: 'navbar-brand' %>
+      </div>
+
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+          <% (RailsExceptionHandlerAdmin::ErrorMessage.uniq.pluck(:app_name) || []).each do |app| %>
+            <li class="<%= params[:app] == app ? 'active' : '' %>"><%= link_to app, rails_exception_handler_admin.error_messages_path(app: app) %></li>
+          <% end %>
+        </ul>
       </div>
     </div>
 
-    <div class="container-fluid">
-      <div class="row-fluid">
-        <!--
-        <div class="span3">
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              <li class="nav-header">Sidebar</li>
-              <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
-            </ul>
-          </div><!--/.well -->
-        </div><!--/span-->
-        <div class="span12">
-          <%#= bootstrap_flash %>
-          <%= yield %>
-        </div>
-      </div><!--/row-->
+    <div class="row">
+      <div class="col-md-12">
+        <%= yield %>
+      </div>
+    </div>
 
-      <footer>
-        <p></p>
-      </footer>
-
-    </div> <!-- /container -->
+    <footer>
+      <p></p>
+    </footer>
 
   </body>
 </html>

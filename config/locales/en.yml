@@ -2,4 +2,16 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  resolved: Resolved
+  rails_exception_handler:
+    app_name: Application
+    doc_root: Document Root
+    referer_url: Referer
+    params: Parameters
+    class_name: Exception
+    message: Message
+    trace: Backtrace
+    target_url: URL
+    user_info: User Info
+    user_agent: Browser
+    created_at: Occured
+    resolve: Resolve

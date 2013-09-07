@@ -17,4 +17,3 @@ gem 'mysql2'
 # To use debugger
 # gem 'debugger'
 
-gem 'twitter-bootstrap-rails', github: 'seyhunak/twitter-bootstrap-rails'
