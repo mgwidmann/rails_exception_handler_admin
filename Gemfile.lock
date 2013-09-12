@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rails_exception_handler_admin (0.0.1)
+    rails_exception_handler_admin (0.0.2)
       rails (~> 3)
 
 GEM
