@@ -12,6 +12,7 @@ Gem::Specification.new do |s|
   s.homepage    = "https://github.com/mgwidmann/rails_exception_handler_admin"
   s.summary     = "Rails Exception Handler Admin interface."
   s.description = "Rails Exception Handler Admin interface built on rails scaffolding with a twitter bootstrap theme."
+  s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
