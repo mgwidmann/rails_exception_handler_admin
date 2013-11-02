@@ -1,8 +1,9 @@
 PATH
   remote: .
   specs:
-    rails_exception_handler_admin (0.0.2)
+    rails_exception_handler_admin (0.0.3)
       rails (~> 3)
+      will_paginate
 
 GEM
   remote: https://rubygems.org/
@@ -86,7 +87,8 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    tzinfo (0.3.37)
+    tzinfo (0.3.38)
+    will_paginate (3.0.5)
 
 PLATFORMS
   ruby

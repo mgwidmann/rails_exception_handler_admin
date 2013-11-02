@@ -6,6 +6,7 @@ module RailsExceptionHandlerAdmin
     # GET /error_messages.json
     def index
       @error_messages = params[:app] ? ErrorMessage.where(app_name: params[:app]).order('created_at DESC') : ErrorMessage.order('created_at DESC')
+      @error_messages = @error_messages.paginate(page: params[:page] || 1, per_page: params[:per_page] || 100)
 
       respond_to do |format|
         format.html # index.html.erb
@@ -45,6 +46,21 @@ module RailsExceptionHandlerAdmin
     def destroy
       @error_message = ErrorMessage.find(params[:id])
       @error_message.destroy
+
+      respond_to do |format|
+        format.html { redirect_to error_messages_url }
+        format.json { head :no_content }
+      end
+    end
+
+    # DELETE /error_messages
+    # DELETE /error_messages.json
+    def destroy_all
+      if params[:app]
+        ErrorMessage.destroy_all(app_name: params[:app])
+      else
+        ErrorMessage.destroy_all
+      end
 
       respond_to do |format|
         format.html { redirect_to error_messages_url }

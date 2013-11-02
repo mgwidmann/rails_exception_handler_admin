@@ -1,6 +1,10 @@
 <div class="page-header">
   <h1>Errors</h1>
 </div>
+<%= will_paginate(@error_messages) %>
+<span style="float: right;">
+  <%= link_to 'Resolve All', error_messages_path(app: params[:app]), method: :delete, confirm: "This will permanently remove all records#{params[:app] ? ' for this application'  : ''}. Are you sure?" %>
+</span>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -33,3 +37,5 @@
     <% end %>
   </tbody>
 </table>
+<%= will_paginate(@error_messages) %>
+
