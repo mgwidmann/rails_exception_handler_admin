@@ -22,3 +22,8 @@ scope constraints: lambda{|req| User.find(session[:current_user_id]).admin? resc
 end
 ```
 Users who attempt to visit the mounted URL without proper authorization will receive a 404 response.
+
+## Notes
+
+Pagination is supported by either [WillPaginate](https://github.com/mislav/will_paginate) or [Kaminari](https://github.com/amatsuda/kaminari) but not a dependency of this gem.
+If you want pagination on the error records, just include either gem in your gemfile.
