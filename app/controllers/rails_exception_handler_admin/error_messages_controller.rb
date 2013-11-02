@@ -6,7 +6,11 @@ module RailsExceptionHandlerAdmin
     # GET /error_messages.json
     def index
       @error_messages = params[:app] ? ErrorMessage.where(app_name: params[:app]).order('created_at DESC') : ErrorMessage.order('created_at DESC')
-      @error_messages = @error_messages.paginate(page: params[:page] || 1, per_page: params[:per_page] || 100)
+      if defined?(WillPaginate)
+        @error_messages = @error_messages.paginate(page: params[:page] || 1, per_page: params[:per_page] || 100)
+      elsif defined?(Kaminari)
+        @error_messages = @error_messages.page(params[:page] || 1).per(params[:per_page] || 100)
+      end
 
       respond_to do |format|
         format.html # index.html.erb
