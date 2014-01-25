@@ -1,0 +1,2302 @@
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-11 21:56:05 -0500
+Connecting to database specified by database.yml
+
+Mysql2::Error (Can't connect to MySQL server on '127.0.0.1' (61)):
+  mysql2 (0.3.13) lib/mysql2/client.rb:58:in `connect'
+  mysql2 (0.3.13) lib/mysql2/client.rb:58:in `initialize'
+  activerecord (3.2.14) lib/active_record/connection_adapters/mysql2_adapter.rb:16:in `new'
+  activerecord (3.2.14) lib/active_record/connection_adapters/mysql2_adapter.rb:16:in `mysql2_connection'
+  activerecord (3.2.14) lib/active_record/connection_adapters/abstract/connection_pool.rb:315:in `new_connection'
+  activerecord (3.2.14) lib/active_record/connection_adapters/abstract/connection_pool.rb:325:in `checkout_new_connection'
+  activerecord (3.2.14) lib/active_record/connection_adapters/abstract/connection_pool.rb:247:in `block (2 levels) in checkout'
+  activerecord (3.2.14) lib/active_record/connection_adapters/abstract/connection_pool.rb:242:in `loop'
+  activerecord (3.2.14) lib/active_record/connection_adapters/abstract/connection_pool.rb:242:in `block in checkout'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+  activerecord (3.2.14) lib/active_record/connection_adapters/abstract/connection_pool.rb:239:in `checkout'
+  activerecord (3.2.14) lib/active_record/connection_adapters/abstract/connection_pool.rb:102:in `block in connection'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+  activerecord (3.2.14) lib/active_record/connection_adapters/abstract/connection_pool.rb:101:in `connection'
+  activerecord (3.2.14) lib/active_record/connection_adapters/abstract/connection_pool.rb:410:in `retrieve_connection'
+  activerecord (3.2.14) lib/active_record/connection_adapters/abstract/connection_specification.rb:171:in `retrieve_connection'
+  activerecord (3.2.14) lib/active_record/connection_adapters/abstract/connection_specification.rb:145:in `connection'
+  activerecord (3.2.14) lib/active_record/query_cache.rb:67:in `rescue in call'
+  activerecord (3.2.14) lib/active_record/query_cache.rb:61:in `call'
+  activerecord (3.2.14) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `_run__1159978982278548252__call__4540386907146876671__callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.14) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.14) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p484@global/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p484@global/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.4ms)
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p484@global/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.9ms)
+Connecting to database specified by database.yml
+  [1m[36m (6.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateRailsExceptionHandlerAdminErrorMessages (20130904021511)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "error_messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "class_name" varchar(255), "message" varchar(255), "trace" varchar(255), "params" varchar(255), "target_url" varchar(255), "referer_url" varchar(255), "user_agent" varchar(255), "user_info" varchar(255), "app_name" varchar(255), "doc_root" varchar(255), "created_at" date NOT NULL, "updated_at" date NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130904021511')[0m
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.9ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateRailsExceptionHandlerAdminErrorMessages (20130904021511)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateRailsExceptionHandlerAdminErrorMessages (20130904021511)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "error_messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "class_name" varchar(255), "message" varchar(255), "trace" varchar(255), "params" varchar(255), "target_url" varchar(255), "referer_url" varchar(255), "user_agent" varchar(255), "user_info" varchar(255), "app_name" varchar(255), "doc_root" varchar(255), "created_at" date NOT NULL, "updated_at" date NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130904021511')[0m
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateRailsExceptionHandlerAdminErrorMessages (20130904021511)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "error_messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "class_name" varchar(255), "message" varchar(255), "trace" varchar(255), "params" varchar(255), "target_url" varchar(255), "referer_url" varchar(255), "user_agent" varchar(255), "user_info" varchar(255), "app_name" varchar(255), "doc_root" varchar(255), "created_at" date NOT NULL, "updated_at" date NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130904021511')[0m
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.9ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateRailsExceptionHandlerAdminErrorMessages (20130904021511)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateRailsExceptionHandlerAdminErrorMessages (20130904021511)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateRailsExceptionHandlerAdminErrorMessages (20130904021511)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (3.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateRailsExceptionHandlerAdminErrorMessages (20130904021511)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "error_messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "class_name" varchar(255), "message" varchar(255), "trace" varchar(255), "params" varchar(255), "target_url" varchar(255), "referer_url" varchar(255), "user_agent" varchar(255), "user_info" varchar(255), "app_name" varchar(255), "doc_root" varchar(255), "created_at" date NOT NULL, "updated_at" date NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130904021511')[0m
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateRailsExceptionHandlerAdminErrorMessages (20130904021511)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "error_messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "class_name" varchar(255), "message" varchar(255), "trace" varchar(255), "params" varchar(255), "target_url" varchar(255), "referer_url" varchar(255), "user_agent" varchar(255), "user_info" varchar(255), "app_name" varchar(255), "doc_root" varchar(255), "created_at" date NOT NULL, "updated_at" date NOT NULL) 
+  [1m[36m (1.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130904021511')[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+ArgumentError: prepare called on a closed database: commit transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+ArgumentError: prepare called on a closed database: rollback transaction
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateRailsExceptionHandlerAdminErrorMessages (20130904021511)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "error_messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "class_name" varchar(255), "message" varchar(255), "trace" varchar(255), "params" varchar(255), "target_url" varchar(255), "referer_url" varchar(255), "user_agent" varchar(255), "user_info" varchar(255), "app_name" varchar(255), "doc_root" varchar(255), "created_at" date NOT NULL, "updated_at" date NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130904021511')[0m
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (4.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateRailsExceptionHandlerAdminErrorMessages (20130904021511)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "error_messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "class_name" varchar(255), "message" varchar(255), "trace" varchar(255), "params" varchar(255), "target_url" varchar(255), "referer_url" varchar(255), "user_agent" varchar(255), "user_info" varchar(255), "app_name" varchar(255), "doc_root" varchar(255), "created_at" date NOT NULL, "updated_at" date NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130904021511')
+SQLite3::SQLException: no such table: schema_migrations: INSERT INTO "schema_migrations" ("version") VALUES ('20130904021511')
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+ArgumentError: prepare called on a closed database: rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.9ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateRailsExceptionHandlerAdminErrorMessages (20130904021511)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "error_messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "class_name" varchar(255), "message" varchar(255), "trace" varchar(255), "params" varchar(255), "target_url" varchar(255), "referer_url" varchar(255), "user_agent" varchar(255), "user_info" varchar(255), "app_name" varchar(255), "doc_root" varchar(255), "created_at" date NOT NULL, "updated_at" date NOT NULL) [0m
+SQLite3::SQLException: table "error_messages" already exists: CREATE TABLE "error_messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "class_name" varchar(255), "message" varchar(255), "trace" varchar(255), "params" varchar(255), "target_url" varchar(255), "referer_url" varchar(255), "user_agent" varchar(255), "user_info" varchar(255), "app_name" varchar(255), "doc_root" varchar(255), "created_at" date NOT NULL, "updated_at" date NOT NULL) 
+  [1m[35m (0.0ms)[0m  rollback transaction
+ArgumentError: prepare called on a closed database: rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (81.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (27.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateRailsExceptionHandlerAdminErrorMessages (20130904021511)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (18.5ms)[0m  [1mCREATE TABLE "error_messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "class_name" varchar(255), "message" varchar(255), "trace" varchar(255), "params" varchar(255), "target_url" varchar(255), "referer_url" varchar(255), "user_agent" varchar(255), "user_info" varchar(255), "app_name" varchar(255), "doc_root" varchar(255), "created_at" date NOT NULL, "updated_at" date NOT NULL) [0m
+  [1m[35m (1.9ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130904021511')
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+ArgumentError: prepare called on a closed database: commit transaction
+  [1m[35m (0.0ms)[0m  rollback transaction
+ArgumentError: prepare called on a closed database: rollback transaction
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateRailsExceptionHandlerAdminErrorMessages (20130904021511)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.4ms)[0m  [1mCREATE TABLE "error_messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "class_name" varchar(255), "message" varchar(255), "trace" varchar(255), "params" varchar(255), "target_url" varchar(255), "referer_url" varchar(255), "user_agent" varchar(255), "user_info" varchar(255), "app_name" varchar(255), "doc_root" varchar(255), "created_at" date NOT NULL, "updated_at" date NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130904021511')
+SQLite3::SQLException: no such table: schema_migrations: INSERT INTO "schema_migrations" ("version") VALUES ('20130904021511')
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+ArgumentError: prepare called on a closed database: rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.9ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateRailsExceptionHandlerAdminErrorMessages (20130904021511)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "error_messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "class_name" varchar(255), "message" varchar(255), "trace" varchar(255), "params" varchar(255), "target_url" varchar(255), "referer_url" varchar(255), "user_agent" varchar(255), "user_info" varchar(255), "app_name" varchar(255), "doc_root" varchar(255), "created_at" date NOT NULL, "updated_at" date NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130904021511')[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+ArgumentError: prepare called on a closed database: commit transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+ArgumentError: prepare called on a closed database: rollback transaction
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (5.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateRailsExceptionHandlerAdminErrorMessages (20130904021511)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "error_messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "class_name" varchar(255), "message" varchar(255), "trace" varchar(255), "params" varchar(255), "target_url" varchar(255), "referer_url" varchar(255), "user_agent" varchar(255), "user_info" varchar(255), "app_name" varchar(255), "doc_root" varchar(255), "created_at" date NOT NULL, "updated_at" date NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130904021511')[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+ArgumentError: prepare called on a closed database: commit transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+ArgumentError: prepare called on a closed database: rollback transaction
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+Connecting to database specified by database.yml
+  [1m[36m (12.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateRailsExceptionHandlerAdminErrorMessages (20130904021511)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.9ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateRailsExceptionHandlerAdminErrorMessages (20130904021511)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateRailsExceptionHandlerAdminErrorMessages (20130904021511)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "error_messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "class_name" varchar(255), "message" varchar(255), "trace" varchar(255), "params" varchar(255), "target_url" varchar(255), "referer_url" varchar(255), "user_agent" varchar(255), "user_info" varchar(255), "app_name" varchar(255), "doc_root" varchar(255), "created_at" date NOT NULL, "updated_at" date NOT NULL) 
+  [1m[36m (2.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130904021511')[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+ArgumentError: prepare called on a closed database: commit transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+ArgumentError: prepare called on a closed database: rollback transaction
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (5.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateRailsExceptionHandlerAdminErrorMessages (20130904021511)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "error_messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "class_name" varchar(255), "message" varchar(255), "trace" varchar(255), "params" varchar(255), "target_url" varchar(255), "referer_url" varchar(255), "user_agent" varchar(255), "user_info" varchar(255), "app_name" varchar(255), "doc_root" varchar(255), "created_at" date NOT NULL, "updated_at" date NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130904021511')[0m
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (17.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateRailsExceptionHandlerAdminErrorMessages (20130904021511)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "error_messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "class_name" varchar(255), "message" varchar(255), "trace" varchar(255), "params" varchar(255), "target_url" varchar(255), "referer_url" varchar(255), "user_agent" varchar(255), "user_info" varchar(255), "app_name" varchar(255), "doc_root" varchar(255), "created_at" date NOT NULL, "updated_at" date NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130904021511')[0m
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateRailsExceptionHandlerAdminErrorMessages (20130904021511)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "error_messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "class_name" varchar(255), "message" varchar(255), "trace" varchar(255), "params" varchar(255), "target_url" varchar(255), "referer_url" varchar(255), "user_agent" varchar(255), "user_info" varchar(255), "app_name" varchar(255), "doc_root" varchar(255), "created_at" date NOT NULL, "updated_at" date NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130904021511')[0m
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateRailsExceptionHandlerAdminErrorMessages (20130904021511)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateRailsExceptionHandlerAdminErrorMessages (20130904021511)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "error_messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "class_name" varchar(255), "message" varchar(255), "trace" varchar(255), "params" varchar(255), "target_url" varchar(255), "referer_url" varchar(255), "user_agent" varchar(255), "user_info" varchar(255), "app_name" varchar(255), "doc_root" varchar(255), "created_at" date NOT NULL, "updated_at" date NOT NULL) 
+  [1m[36m (1.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130904021511')[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+ArgumentError: prepare called on a closed database: commit transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+ArgumentError: prepare called on a closed database: rollback transaction
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+Connecting to database specified by database.yml
+  [1m[36m (0.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateRailsExceptionHandlerAdminErrorMessages (20130904021511)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (3.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateRailsExceptionHandlerAdminErrorMessages (20130904021511)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "error_messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "class_name" varchar(255), "message" varchar(255), "trace" varchar(255), "params" varchar(255), "target_url" varchar(255), "referer_url" varchar(255), "user_agent" varchar(255), "user_info" varchar(255), "app_name" varchar(255), "doc_root" varchar(255), "created_at" date NOT NULL, "updated_at" date NOT NULL) 
+  [1m[36m (1.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130904021511')[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+ArgumentError: prepare called on a closed database: commit transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+ArgumentError: prepare called on a closed database: rollback transaction
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM schema_migrations[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateRailsExceptionHandlerAdminErrorMessages (20131212063533)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "error_messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "class_name" varchar(255), "message" varchar(255), "trace" varchar(255), "params" varchar(255), "target_url" varchar(255), "referer_url" varchar(255), "user_agent" varchar(255), "user_info" varchar(255), "app_name" varchar(255), "doc_root" varchar(255), "created_at" date NOT NULL, "updated_at" date NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20131212063533')[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+ArgumentError: prepare called on a closed database: commit transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+ArgumentError: prepare called on a closed database: rollback transaction
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (246.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateRailsExceptionHandlerAdminErrorMessages (20131212063533)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "error_messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "class_name" varchar(255), "message" varchar(255), "trace" varchar(255), "params" varchar(255), "target_url" varchar(255), "referer_url" varchar(255), "user_agent" varchar(255), "user_info" varchar(255), "app_name" varchar(255), "doc_root" varchar(255), "created_at" date NOT NULL, "updated_at" date NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20131212063533')[0m
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (29.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (38.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateRailsExceptionHandlerAdminErrorMessages (20131212063533)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "error_messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "class_name" varchar(255), "message" varchar(255), "trace" varchar(255), "params" varchar(255), "target_url" varchar(255), "referer_url" varchar(255), "user_agent" varchar(255), "user_info" varchar(255), "app_name" varchar(255), "doc_root" varchar(255), "created_at" date NOT NULL, "updated_at" date NOT NULL) 
+  [1m[36m (1.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20131212063533')[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+ArgumentError: prepare called on a closed database: commit transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+ArgumentError: prepare called on a closed database: rollback transaction
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+Connecting to database specified by database.yml
+  [1m[36m (0.9ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateRailsExceptionHandlerAdminErrorMessages (20131212063533)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (3.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateRailsExceptionHandlerAdminErrorMessages (20131212063533)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "error_messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "class_name" varchar(255), "message" varchar(255), "trace" varchar(255), "params" varchar(255), "target_url" varchar(255), "referer_url" varchar(255), "user_agent" varchar(255), "user_info" varchar(255), "app_name" varchar(255), "doc_root" varchar(255), "created_at" date NOT NULL, "updated_at" date NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20131212063533')[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+ArgumentError: prepare called on a closed database: commit transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+ArgumentError: prepare called on a closed database: rollback transaction
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateRailsExceptionHandlerAdminErrorMessages (20131212063533)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "error_messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "class_name" varchar(255), "message" varchar(255), "trace" varchar(255), "params" varchar(255), "target_url" varchar(255), "referer_url" varchar(255), "user_agent" varchar(255), "user_info" varchar(255), "app_name" varchar(255), "doc_root" varchar(255), "created_at" date NOT NULL, "updated_at" date NOT NULL) 
+  [1m[36m (1.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20131212063533')[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+ArgumentError: prepare called on a closed database: commit transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+ArgumentError: prepare called on a closed database: rollback transaction
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateRailsExceptionHandlerAdminErrorMessages (20131212063533)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "error_messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "class_name" varchar(255), "message" varchar(255), "trace" varchar(255), "params" varchar(255), "target_url" varchar(255), "referer_url" varchar(255), "user_agent" varchar(255), "user_info" varchar(255), "app_name" varchar(255), "doc_root" varchar(255), "created_at" date NOT NULL, "updated_at" date NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20131212063533')[0m
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateRailsExceptionHandlerAdminErrorMessages (20131212063533)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "error_messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "class_name" varchar(255), "message" varchar(255), "trace" varchar(255), "params" varchar(255), "target_url" varchar(255), "referer_url" varchar(255), "user_agent" varchar(255), "user_info" varchar(255), "app_name" varchar(255), "doc_root" varchar(255), "created_at" date NOT NULL, "updated_at" date NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20131212063533')[0m
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+Connecting to database specified by database.yml
+  [1m[36m (0.6ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (13.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.9ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateRailsExceptionHandlerAdminErrorMessages (20130904021511)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "error_messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "class_name" varchar(255), "message" varchar(255), "trace" varchar(255), "params" varchar(255), "target_url" varchar(255), "referer_url" varchar(255), "user_agent" varchar(255), "user_info" varchar(255), "app_name" varchar(255), "doc_root" varchar(255), "created_at" date NOT NULL, "updated_at" date NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130904021511')[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+ArgumentError: prepare called on a closed database: commit transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+ArgumentError: prepare called on a closed database: rollback transaction
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.7ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateRailsExceptionHandlerAdminErrorMessages (20140125055141)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  CREATE TABLE "error_messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "class_name" varchar(255), "message" varchar(255), "trace" varchar(255), "params" varchar(255), "target_url" varchar(255), "referer_url" varchar(255), "user_agent" varchar(255), "user_info" varchar(255), "app_name" varchar(255), "doc_root" varchar(255), "created_at" date NOT NULL, "updated_at" date NOT NULL) 
+ArgumentError: prepare called on a closed database: CREATE TABLE "error_messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "class_name" varchar(255), "message" varchar(255), "trace" varchar(255), "params" varchar(255), "target_url" varchar(255), "referer_url" varchar(255), "user_agent" varchar(255), "user_info" varchar(255), "app_name" varchar(255), "doc_root" varchar(255), "created_at" date NOT NULL, "updated_at" date NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+ArgumentError: prepare called on a closed database: rollback transaction
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+Connecting to database specified by database.yml
+  [1m[36m (0.7ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateRailsExceptionHandlerAdminErrorMessages (20140125055141)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  CREATE TABLE "error_messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "class_name" varchar(255), "message" varchar(255), "trace" varchar(255), "params" varchar(255), "target_url" varchar(255), "referer_url" varchar(255), "user_agent" varchar(255), "user_info" varchar(255), "app_name" varchar(255), "doc_root" varchar(255), "created_at" date NOT NULL, "updated_at" date NOT NULL) 
+ArgumentError: prepare called on a closed database: CREATE TABLE "error_messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "class_name" varchar(255), "message" varchar(255), "trace" varchar(255), "params" varchar(255), "target_url" varchar(255), "referer_url" varchar(255), "user_agent" varchar(255), "user_info" varchar(255), "app_name" varchar(255), "doc_root" varchar(255), "created_at" date NOT NULL, "updated_at" date NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+ArgumentError: prepare called on a closed database: rollback transaction
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+Connecting to database specified by database.yml
+  [1m[36m (0.9ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (2.0ms)[0m  CREATE TABLE "error_messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "class_name" varchar(255), "message" varchar(255), "trace" varchar(255), "params" varchar(255), "target_url" varchar(255), "referer_url" varchar(255), "user_agent" varchar(255), "user_info" varchar(255), "app_name" varchar(255), "doc_root" varchar(255), "created_at" date NOT NULL, "updated_at" date NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (1.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140125055141')
+  [1m[36m (1.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130904021511')[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.9ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (2.1ms)[0m  CREATE TABLE "error_messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "class_name" varchar(255), "message" varchar(255), "trace" varchar(255), "params" varchar(255), "target_url" varchar(255), "referer_url" varchar(255), "user_agent" varchar(255), "user_info" varchar(255), "app_name" varchar(255), "doc_root" varchar(255), "created_at" date NOT NULL, "updated_at" date NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140125055141')
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130904021511')[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-25 01:16:03 -0500
+Connecting to database specified by database.yml
+
+ActionController::RoutingError (No route matches [GET] "/"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.14) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/rails_exception_handler_admin" for 127.0.0.1 at 2014-01-25 01:16:20 -0500
+Processing by RailsExceptionHandlerAdmin::ErrorMessagesController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+NameError (uninitialized constant RailsExceptionHandlerAdmin::ErrorMessagesController::ErrorMessage):
+  /Users/matt/sidework/rails_exception_handler_admin/app/controllers/rails_exception_handler_admin/error_messages_controller.rb:8:in `index'
+  actionpack (3.2.14) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.14) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.14) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:403:in `_run__1812155037657685209__process_action__2947966359869588580__callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.14) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.14) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.14) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.14) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.14) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.14) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.14) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.14) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  mongoid (3.1.6) lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  mongoid (3.1.6) lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  mongoid (3.1.6) lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.14) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.14) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `_run__3990515175057467932__call__1079089034040951748__callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.14) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.14) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.6ms)
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.4ms)
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.2ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/rails_exception_handler_admin/error_messages" for 127.0.0.1 at 2014-01-25 01:21:13 -0500
+Connecting to database specified by database.yml
+
+ActionController::RoutingError (No route matches [GET] "/rails_exception_handler_admin/error_messages"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.14) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/rails_exception_handler_admin/error_messages" for 127.0.0.1 at 2014-01-25 01:22:10 -0500
+Processing by RailsExceptionHandlerAdmin::ErrorMessagesController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+NameError (uninitialized constant RailsExceptionHandlerAdmin::ErrorMessagesController::ErrorMessage):
+  /Users/matt/sidework/rails_exception_handler_admin/app/controllers/rails_exception_handler_admin/error_messages_controller.rb:8:in `index'
+  actionpack (3.2.14) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.14) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.14) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:403:in `_run__155232064253832171__process_action__2170446611581324570__callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.14) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.14) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.14) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.14) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.14) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.14) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.14) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.14) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  mongoid (3.1.6) lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  mongoid (3.1.6) lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  mongoid (3.1.6) lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.14) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.14) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `_run__195102225425989865__call__195208852090799533__callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.14) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.14) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.5ms)
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.8ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/rails_exception_handler_admin/error_messages" for 127.0.0.1 at 2014-01-25 01:42:36 -0500
+Processing by RailsExceptionHandlerAdmin::ErrorMessagesController#index as HTML
+Completed 500 Internal Server Error in 65ms
+
+NameError (uninitialized constant RailsExceptionHandler::Mongoid::ErrorMessage::ErrorMessage):
+  /Users/matt/sidework/rails_exception_handler_admin/app/controllers/rails_exception_handler_admin/error_messages_controller.rb:15:in `index'
+  actionpack (3.2.14) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.14) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.14) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:403:in `_run__155232064253832171__process_action__2170446611581324570__callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.14) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.14) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.14) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.14) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.14) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.14) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.14) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.14) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  mongoid (3.1.6) lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  mongoid (3.1.6) lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  mongoid (3.1.6) lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.14) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.14) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `_run__195102225425989865__call__195208852090799533__callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.14) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.14) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.9ms)
+
+
+Started GET "/rails_exception_handler_admin/error_messages" for 127.0.0.1 at 2014-01-25 01:45:54 -0500
+Processing by RailsExceptionHandlerAdmin::ErrorMessagesController#index as HTML
+Completed 500 Internal Server Error in 8ms
+
+NoMethodError (undefined method `order' for RailsExceptionHandler::Mongoid::ErrorMessage:Class):
+  /Users/matt/sidework/rails_exception_handler_admin/app/controllers/rails_exception_handler_admin/error_messages_controller.rb:15:in `index'
+  actionpack (3.2.14) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.14) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.14) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:403:in `_run__155232064253832171__process_action__2170446611581324570__callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.14) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.14) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.14) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.14) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.14) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.14) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.14) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.14) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  mongoid (3.1.6) lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  mongoid (3.1.6) lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  mongoid (3.1.6) lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.14) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.14) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `_run__195102225425989865__call__195208852090799533__callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.14) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.14) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.4ms)
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.7ms)
+
+
+Started GET "/rails_exception_handler_admin/error_messages" for 127.0.0.1 at 2014-01-25 01:46:09 -0500
+Processing by RailsExceptionHandlerAdmin::ErrorMessagesController#index as HTML
+Completed 500 Internal Server Error in 8ms
+
+NoMethodError (undefined method `order' for #<Mongoid::Criteria:0x007f7f8e8dc268>):
+  mongoid (3.1.6) lib/mongoid/criteria.rb:518:in `method_missing'
+  /Users/matt/sidework/rails_exception_handler_admin/app/controllers/rails_exception_handler_admin/error_messages_controller.rb:15:in `index'
+  actionpack (3.2.14) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.14) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.14) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:403:in `_run__155232064253832171__process_action__2170446611581324570__callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.14) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.14) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.14) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.14) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.14) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.14) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.14) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.14) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  mongoid (3.1.6) lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  mongoid (3.1.6) lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  mongoid (3.1.6) lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.14) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.14) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `_run__195102225425989865__call__195208852090799533__callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.14) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.14) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.6ms)
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.4ms)
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.6ms)
+
+
+Started GET "/rails_exception_handler_admin/error_messages" for 127.0.0.1 at 2014-01-25 01:46:39 -0500
+Processing by RailsExceptionHandlerAdmin::ErrorMessagesController#index as HTML
+  Rendered /Users/matt/sidework/rails_exception_handler_admin/app/views/rails_exception_handler_admin/error_messages/index.html.erb within layouts/rails_exception_handler_admin/application (39.6ms)
+Completed 500 Internal Server Error in 68ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    19:     </tr>
+    20:   </thead>
+    21:   <tbody>
+    22:     <% @error_messages.each do |error_message| %>
+    23:       <tr>
+    24:         <td><%= link_to error_message.class_name, rails_exception_handler_admin.error_message_path(error_message) %></td>
+    25:         <td><%= error_message.message %></td>
+  /Users/matt/sidework/rails_exception_handler_admin/app/views/rails_exception_handler_admin/error_messages/index.html.erb:22:in `___sers_matt_sidework_rails_exception_handler_admin_app_views_rails_exception_handler_admin_error_messages_index_html_erb__1749765032266861409_70092908140900'
+  actionpack (3.2.14) lib/action_view/template.rb:145:in `block in render'
+  activesupport (3.2.14) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.14) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.14) lib/action_view/renderer/template_renderer.rb:48:in `block (2 levels) in render_template'
+  actionpack (3.2.14) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.14) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.14) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.14) lib/action_view/renderer/template_renderer.rb:47:in `block in render_template'
+  actionpack (3.2.14) lib/action_view/renderer/template_renderer.rb:55:in `render_with_layout'
+  actionpack (3.2.14) lib/action_view/renderer/template_renderer.rb:46:in `render_template'
+  actionpack (3.2.14) lib/action_view/renderer/template_renderer.rb:19:in `render'
+  actionpack (3.2.14) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.14) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.14) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.14) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.14) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.14) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.14) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.14) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.14) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.14) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.14) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.14) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.14) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.14) lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+  /Users/matt/sidework/rails_exception_handler_admin/app/controllers/rails_exception_handler_admin/error_messages_controller.rb:23:in `index'
+  actionpack (3.2.14) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.14) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.14) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:403:in `_run__155232064253832171__process_action__2170446611581324570__callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.14) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.14) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.14) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.14) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.14) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.14) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.14) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.14) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  mongoid (3.1.6) lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  mongoid (3.1.6) lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  mongoid (3.1.6) lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.14) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.14) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `_run__195102225425989865__call__195208852090799533__callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.14) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.14) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.6ms)
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.4ms)
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.7ms)
+
+
+Started GET "/rails_exception_handler_admin/error_messages" for 127.0.0.1 at 2014-01-25 02:00:25 -0500
+Processing by RailsExceptionHandlerAdmin::ErrorMessagesController#index as HTML
+  [1m[36mRailsExceptionHandler::ActiveRecord::ErrorMessage Load (22.3ms)[0m  [1mSELECT "error_messages".* FROM "error_messages" ORDER BY created_at DESC[0m
+  Rendered /Users/matt/sidework/rails_exception_handler_admin/app/views/rails_exception_handler_admin/error_messages/index.html.erb within layouts/rails_exception_handler_admin/application (41.2ms)
+Completed 500 Internal Server Error in 43ms
+
+ActionView::Template::Error (
+Problem:
+  No configuration could be found for a session named 'default'.
+Summary:
+  When attempting to create the new session, Mongoid could not find a session configuration for the name: 'default'. This is necessary in order to know the host, port, and options needed to connect.
+Resolution:
+  Double check your mongoid.yml to make sure under the sessions key that a configuration exists for 'default'. If you have set the configuration programatically, ensure that 'default' exists in the configuration hash.):
+    20:         </tr>
+    21:       </thead>
+    22:       <tbody>
+    23:         <% errors.each do |error_message| %>
+    24:           <tr>
+    25:             <td><%= link_to error_message.class_name, rails_exception_handler_admin.error_message_path(error_message) %></td>
+    26:             <td><%= error_message.message %></td>
+  mongoid (3.1.6) lib/mongoid/sessions/factory.rb:27:in `create'
+  mongoid (3.1.6) lib/mongoid/sessions.rb:137:in `with_name'
+  mongoid (3.1.6) lib/mongoid/sessions.rb:390:in `__session__'
+  mongoid (3.1.6) lib/mongoid/sessions.rb:227:in `mongo_session'
+  mongoid (3.1.6) lib/mongoid/sessions.rb:171:in `collection'
+  mongoid (3.1.6) lib/mongoid/contextual/mongo.rb:260:in `initialize'
+  mongoid (3.1.6) lib/mongoid/contextual.rb:51:in `new'
+  mongoid (3.1.6) lib/mongoid/contextual.rb:51:in `create_context'
+  mongoid (3.1.6) lib/mongoid/contextual.rb:34:in `context'
+  mongoid (3.1.6) lib/mongoid/contextual.rb:19:in `each'
+  /Users/matt/sidework/rails_exception_handler_admin/app/views/rails_exception_handler_admin/error_messages/index.html.erb:23:in `block in ___sers_matt_sidework_rails_exception_handler_admin_app_views_rails_exception_handler_admin_error_messages_index_html_erb__1749765032266861409_70092916935440'
+  /Users/matt/sidework/rails_exception_handler_admin/app/views/rails_exception_handler_admin/error_messages/index.html.erb:1:in `each'
+  /Users/matt/sidework/rails_exception_handler_admin/app/views/rails_exception_handler_admin/error_messages/index.html.erb:1:in `___sers_matt_sidework_rails_exception_handler_admin_app_views_rails_exception_handler_admin_error_messages_index_html_erb__1749765032266861409_70092916935440'
+  actionpack (3.2.14) lib/action_view/template.rb:145:in `block in render'
+  activesupport (3.2.14) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.14) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.14) lib/action_view/renderer/template_renderer.rb:48:in `block (2 levels) in render_template'
+  actionpack (3.2.14) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.14) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.14) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.14) lib/action_view/renderer/template_renderer.rb:47:in `block in render_template'
+  actionpack (3.2.14) lib/action_view/renderer/template_renderer.rb:55:in `render_with_layout'
+  actionpack (3.2.14) lib/action_view/renderer/template_renderer.rb:46:in `render_template'
+  actionpack (3.2.14) lib/action_view/renderer/template_renderer.rb:19:in `render'
+  actionpack (3.2.14) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.14) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.14) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.14) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.14) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.14) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.14) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.14) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.14) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.14) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.14) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.14) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.14) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.14) lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+  /Users/matt/sidework/rails_exception_handler_admin/app/controllers/rails_exception_handler_admin/error_messages_controller.rb:23:in `index'
+  actionpack (3.2.14) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.14) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.14) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:403:in `_run__155232064253832171__process_action__2170446611581324570__callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.14) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.14) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.14) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.14) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.14) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.14) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.14) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.14) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  mongoid (3.1.6) lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  mongoid (3.1.6) lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  mongoid (3.1.6) lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.14) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.14) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `_run__195102225425989865__call__195208852090799533__callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.14) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.14) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.6ms)
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.5ms)
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.8ms)
+
+
+Started GET "/rails_exception_handler_admin/error_messages" for 127.0.0.1 at 2014-01-25 02:01:31 -0500
+Processing by RailsExceptionHandlerAdmin::ErrorMessagesController#index as HTML
+  [1m[35mRailsExceptionHandler::ActiveRecord::ErrorMessage Load (0.1ms)[0m  SELECT "error_messages".* FROM "error_messages" ORDER BY created_at DESC
+  Rendered /Users/matt/sidework/rails_exception_handler_admin/app/views/rails_exception_handler_admin/error_messages/index.html.erb within layouts/rails_exception_handler_admin/application (2.1ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (
+Problem:
+  No configuration could be found for a session named 'default'.
+Summary:
+  When attempting to create the new session, Mongoid could not find a session configuration for the name: 'default'. This is necessary in order to know the host, port, and options needed to connect.
+Resolution:
+  Double check your mongoid.yml to make sure under the sessions key that a configuration exists for 'default'. If you have set the configuration programatically, ensure that 'default' exists in the configuration hash.):
+    20:         </tr>
+    21:       </thead>
+    22:       <tbody>
+    23:         <% errors.each do |error_message| %>
+    24:           <tr>
+    25:             <td><%= link_to error_message.class_name, rails_exception_handler_admin.error_message_path(error_message) %></td>
+    26:             <td><%= error_message.message %></td>
+  mongoid (3.1.6) lib/mongoid/sessions/factory.rb:27:in `create'
+  mongoid (3.1.6) lib/mongoid/sessions.rb:137:in `with_name'
+  mongoid (3.1.6) lib/mongoid/sessions.rb:390:in `__session__'
+  mongoid (3.1.6) lib/mongoid/sessions.rb:227:in `mongo_session'
+  mongoid (3.1.6) lib/mongoid/sessions.rb:171:in `collection'
+  mongoid (3.1.6) lib/mongoid/contextual/mongo.rb:260:in `initialize'
+  mongoid (3.1.6) lib/mongoid/contextual.rb:51:in `new'
+  mongoid (3.1.6) lib/mongoid/contextual.rb:51:in `create_context'
+  mongoid (3.1.6) lib/mongoid/contextual.rb:34:in `context'
+  mongoid (3.1.6) lib/mongoid/contextual.rb:19:in `each'
+  /Users/matt/sidework/rails_exception_handler_admin/app/views/rails_exception_handler_admin/error_messages/index.html.erb:23:in `block in ___sers_matt_sidework_rails_exception_handler_admin_app_views_rails_exception_handler_admin_error_messages_index_html_erb__1749765032266861409_70092916935440'
+  /Users/matt/sidework/rails_exception_handler_admin/app/views/rails_exception_handler_admin/error_messages/index.html.erb:1:in `each'
+  /Users/matt/sidework/rails_exception_handler_admin/app/views/rails_exception_handler_admin/error_messages/index.html.erb:1:in `___sers_matt_sidework_rails_exception_handler_admin_app_views_rails_exception_handler_admin_error_messages_index_html_erb__1749765032266861409_70092916935440'
+  actionpack (3.2.14) lib/action_view/template.rb:145:in `block in render'
+  activesupport (3.2.14) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.14) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.14) lib/action_view/renderer/template_renderer.rb:48:in `block (2 levels) in render_template'
+  actionpack (3.2.14) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.14) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.14) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.14) lib/action_view/renderer/template_renderer.rb:47:in `block in render_template'
+  actionpack (3.2.14) lib/action_view/renderer/template_renderer.rb:55:in `render_with_layout'
+  actionpack (3.2.14) lib/action_view/renderer/template_renderer.rb:46:in `render_template'
+  actionpack (3.2.14) lib/action_view/renderer/template_renderer.rb:19:in `render'
+  actionpack (3.2.14) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.14) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.14) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.14) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.14) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.14) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.14) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.14) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.14) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.14) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.14) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.14) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.14) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.14) lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+  /Users/matt/sidework/rails_exception_handler_admin/app/controllers/rails_exception_handler_admin/error_messages_controller.rb:23:in `index'
+  actionpack (3.2.14) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.14) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.14) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:403:in `_run__155232064253832171__process_action__2170446611581324570__callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.14) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.14) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.14) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.14) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.14) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.14) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.14) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.14) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  mongoid (3.1.6) lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  mongoid (3.1.6) lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  mongoid (3.1.6) lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.14) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.14) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `_run__195102225425989865__call__195208852090799533__callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.14) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.14) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.6ms)
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.4ms)
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.7ms)
+
+
+Started GET "/rails_exception_handler_admin/error_messages" for 127.0.0.1 at 2014-01-25 02:01:33 -0500
+Processing by RailsExceptionHandlerAdmin::ErrorMessagesController#index as HTML
+  [1m[36mRailsExceptionHandler::ActiveRecord::ErrorMessage Load (0.1ms)[0m  [1mSELECT "error_messages".* FROM "error_messages" ORDER BY created_at DESC[0m
+  Rendered /Users/matt/sidework/rails_exception_handler_admin/app/views/rails_exception_handler_admin/error_messages/index.html.erb within layouts/rails_exception_handler_admin/application (2.0ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (
+Problem:
+  No configuration could be found for a session named 'default'.
+Summary:
+  When attempting to create the new session, Mongoid could not find a session configuration for the name: 'default'. This is necessary in order to know the host, port, and options needed to connect.
+Resolution:
+  Double check your mongoid.yml to make sure under the sessions key that a configuration exists for 'default'. If you have set the configuration programatically, ensure that 'default' exists in the configuration hash.):
+    20:         </tr>
+    21:       </thead>
+    22:       <tbody>
+    23:         <% errors.each do |error_message| %>
+    24:           <tr>
+    25:             <td><%= link_to error_message.class_name, rails_exception_handler_admin.error_message_path(error_message) %></td>
+    26:             <td><%= error_message.message %></td>
+  mongoid (3.1.6) lib/mongoid/sessions/factory.rb:27:in `create'
+  mongoid (3.1.6) lib/mongoid/sessions.rb:137:in `with_name'
+  mongoid (3.1.6) lib/mongoid/sessions.rb:390:in `__session__'
+  mongoid (3.1.6) lib/mongoid/sessions.rb:227:in `mongo_session'
+  mongoid (3.1.6) lib/mongoid/sessions.rb:171:in `collection'
+  mongoid (3.1.6) lib/mongoid/contextual/mongo.rb:260:in `initialize'
+  mongoid (3.1.6) lib/mongoid/contextual.rb:51:in `new'
+  mongoid (3.1.6) lib/mongoid/contextual.rb:51:in `create_context'
+  mongoid (3.1.6) lib/mongoid/contextual.rb:34:in `context'
+  mongoid (3.1.6) lib/mongoid/contextual.rb:19:in `each'
+  /Users/matt/sidework/rails_exception_handler_admin/app/views/rails_exception_handler_admin/error_messages/index.html.erb:23:in `block in ___sers_matt_sidework_rails_exception_handler_admin_app_views_rails_exception_handler_admin_error_messages_index_html_erb__1749765032266861409_70092916935440'
+  /Users/matt/sidework/rails_exception_handler_admin/app/views/rails_exception_handler_admin/error_messages/index.html.erb:1:in `each'
+  /Users/matt/sidework/rails_exception_handler_admin/app/views/rails_exception_handler_admin/error_messages/index.html.erb:1:in `___sers_matt_sidework_rails_exception_handler_admin_app_views_rails_exception_handler_admin_error_messages_index_html_erb__1749765032266861409_70092916935440'
+  actionpack (3.2.14) lib/action_view/template.rb:145:in `block in render'
+  activesupport (3.2.14) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.14) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.14) lib/action_view/renderer/template_renderer.rb:48:in `block (2 levels) in render_template'
+  actionpack (3.2.14) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.14) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.14) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.14) lib/action_view/renderer/template_renderer.rb:47:in `block in render_template'
+  actionpack (3.2.14) lib/action_view/renderer/template_renderer.rb:55:in `render_with_layout'
+  actionpack (3.2.14) lib/action_view/renderer/template_renderer.rb:46:in `render_template'
+  actionpack (3.2.14) lib/action_view/renderer/template_renderer.rb:19:in `render'
+  actionpack (3.2.14) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.14) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.14) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.14) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.14) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.14) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.14) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.14) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.14) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.14) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.14) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.14) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.14) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.14) lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+  /Users/matt/sidework/rails_exception_handler_admin/app/controllers/rails_exception_handler_admin/error_messages_controller.rb:23:in `index'
+  actionpack (3.2.14) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.14) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.14) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:403:in `_run__155232064253832171__process_action__2170446611581324570__callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.14) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.14) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.14) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.14) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.14) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.14) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.14) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.14) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  mongoid (3.1.6) lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  mongoid (3.1.6) lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  mongoid (3.1.6) lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.14) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.14) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `_run__195102225425989865__call__195208852090799533__callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.14) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.14) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.6ms)
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.4ms)
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.7ms)
+
+
+Started GET "/rails_exception_handler_admin/error_messages" for 127.0.0.1 at 2014-01-25 02:01:49 -0500
+Connecting to database specified by database.yml
+Processing by RailsExceptionHandlerAdmin::ErrorMessagesController#index as HTML
+  [1m[36mRailsExceptionHandler::ActiveRecord::ErrorMessage Load (0.8ms)[0m  [1mSELECT "error_messages".* FROM "error_messages" ORDER BY created_at DESC[0m
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9592ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9620ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.0130ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.0703ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.0049ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.0490ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9692ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.0209ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (18.2900ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.0333ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.0321ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9561ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9832ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.2231ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.1179ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.9890ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.0438ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.0672ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.1163ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.0800ms)
+  MOPED: Could not connect to any node in replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>, refreshing list.
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (1.0161ms)
+  Rendered /Users/matt/sidework/rails_exception_handler_admin/app/views/rails_exception_handler_admin/error_messages/index.html.erb within layouts/rails_exception_handler_admin/application (5080.1ms)
+Completed 500 Internal Server Error in 5138ms
+
+ActionView::Template::Error (Could not connect to any secondary or primary nodes for replica set <Moped::Cluster nodes=[<Moped::Node resolved_address="127.0.0.1:27017">]>):
+    20:         </tr>
+    21:       </thead>
+    22:       <tbody>
+    23:         <% errors.each do |error_message| %>
+    24:           <tr>
+    25:             <td><%= link_to error_message.class_name, rails_exception_handler_admin.error_message_path(error_message) %></td>
+    26:             <td><%= error_message.message %></td>
+  moped (1.5.1) lib/moped/cluster.rb:268:in `with_secondary'
+  moped (1.5.1) lib/moped/cluster.rb:265:in `with_secondary'
+  moped (1.5.1) lib/moped/cluster.rb:265:in `with_secondary'
+  moped (1.5.1) lib/moped/cluster.rb:265:in `with_secondary'
+  moped (1.5.1) lib/moped/cluster.rb:265:in `with_secondary'
+  moped (1.5.1) lib/moped/cluster.rb:265:in `with_secondary'
+  moped (1.5.1) lib/moped/cluster.rb:265:in `with_secondary'
+  moped (1.5.1) lib/moped/cluster.rb:265:in `with_secondary'
+  moped (1.5.1) lib/moped/cluster.rb:265:in `with_secondary'
+  moped (1.5.1) lib/moped/cluster.rb:265:in `with_secondary'
+  moped (1.5.1) lib/moped/cluster.rb:265:in `with_secondary'
+  moped (1.5.1) lib/moped/cluster.rb:265:in `with_secondary'
+  moped (1.5.1) lib/moped/cluster.rb:265:in `with_secondary'
+  moped (1.5.1) lib/moped/cluster.rb:265:in `with_secondary'
+  moped (1.5.1) lib/moped/cluster.rb:265:in `with_secondary'
+  moped (1.5.1) lib/moped/cluster.rb:265:in `with_secondary'
+  moped (1.5.1) lib/moped/cluster.rb:265:in `with_secondary'
+  moped (1.5.1) lib/moped/cluster.rb:265:in `with_secondary'
+  moped (1.5.1) lib/moped/cluster.rb:265:in `with_secondary'
+  moped (1.5.1) lib/moped/cluster.rb:265:in `with_secondary'
+  moped (1.5.1) lib/moped/cluster.rb:265:in `with_secondary'
+  moped (1.5.1) lib/moped/session/context.rb:104:in `with_node'
+  moped (1.5.1) lib/moped/cursor.rb:137:in `load_docs'
+  moped (1.5.1) lib/moped/cursor.rb:25:in `each'
+  moped (1.5.1) lib/moped/query.rb:76:in `each'
+  moped (1.5.1) lib/moped/query.rb:76:in `each'
+  mongoid (3.1.6) lib/mongoid/contextual/mongo.rb:122:in `block in each'
+  mongoid (3.1.6) lib/mongoid/contextual/mongo.rb:619:in `selecting'
+  mongoid (3.1.6) lib/mongoid/contextual/mongo.rb:121:in `each'
+  mongoid (3.1.6) lib/mongoid/contextual.rb:19:in `each'
+  /Users/matt/sidework/rails_exception_handler_admin/app/views/rails_exception_handler_admin/error_messages/index.html.erb:23:in `block in ___sers_matt_sidework_rails_exception_handler_admin_app_views_rails_exception_handler_admin_error_messages_index_html_erb__1892456966232827582_70176624439840'
+  /Users/matt/sidework/rails_exception_handler_admin/app/views/rails_exception_handler_admin/error_messages/index.html.erb:1:in `each'
+  /Users/matt/sidework/rails_exception_handler_admin/app/views/rails_exception_handler_admin/error_messages/index.html.erb:1:in `___sers_matt_sidework_rails_exception_handler_admin_app_views_rails_exception_handler_admin_error_messages_index_html_erb__1892456966232827582_70176624439840'
+  actionpack (3.2.14) lib/action_view/template.rb:145:in `block in render'
+  activesupport (3.2.14) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.14) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.14) lib/action_view/renderer/template_renderer.rb:48:in `block (2 levels) in render_template'
+  actionpack (3.2.14) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.14) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.14) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (3.2.14) lib/action_view/renderer/template_renderer.rb:47:in `block in render_template'
+  actionpack (3.2.14) lib/action_view/renderer/template_renderer.rb:55:in `render_with_layout'
+  actionpack (3.2.14) lib/action_view/renderer/template_renderer.rb:46:in `render_template'
+  actionpack (3.2.14) lib/action_view/renderer/template_renderer.rb:19:in `render'
+  actionpack (3.2.14) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.14) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.14) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.14) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.14) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.14) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.14) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.14) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.14) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.14) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.14) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.14) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.14) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.14) lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+  /Users/matt/sidework/rails_exception_handler_admin/app/controllers/rails_exception_handler_admin/error_messages_controller.rb:23:in `index'
+  actionpack (3.2.14) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.14) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.14) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:403:in `_run__927432562482082848__process_action__2698429176104165039__callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.14) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.14) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.14) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.14) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.14) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.14) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.14) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.14) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  mongoid (3.1.6) lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  mongoid (3.1.6) lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  mongoid (3.1.6) lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.14) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.14) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `_run__1171777503908731774__call__4553724683409332731__callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.14) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.14) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.6ms)
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.4ms)
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.6ms)
+
+
+Started GET "/rails_exception_handler_admin/error_messages" for 127.0.0.1 at 2014-01-25 02:02:14 -0500
+Connecting to database specified by database.yml
+Processing by RailsExceptionHandlerAdmin::ErrorMessagesController#index as HTML
+  [1m[36mRailsExceptionHandler::ActiveRecord::ErrorMessage Load (0.8ms)[0m  [1mSELECT "error_messages".* FROM "error_messages" ORDER BY created_at DESC[0m
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6211ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=exception_database collection=error_message selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (17.5681ms)
+  Rendered /Users/matt/sidework/rails_exception_handler_admin/app/views/rails_exception_handler_admin/error_messages/index.html.erb within layouts/rails_exception_handler_admin/application (35.5ms)
+Compiled rails_exception_handler_admin/bootstrap.min.css  (0ms)  (pid 44913)
+Compiled rails_exception_handler_admin/error_messages.css  (0ms)  (pid 44913)
+Compiled rails_exception_handler_admin/application.css  (25ms)  (pid 44913)
+Compiled jquery.js  (1ms)  (pid 44913)
+Compiled jquery_ujs.js  (0ms)  (pid 44913)
+Compiled rails_exception_handler_admin/error_messages.js  (0ms)  (pid 44913)
+Compiled rails_exception_handler_admin/application.js  (72ms)  (pid 44913)
+Completed 500 Internal Server Error in 227ms
+
+ActionView::Template::Error (uninitialized constant RailsExceptionHandlerAdmin::ErrorMessage):
+    45: 
+    46:       <div class="collapse navbar-collapse navbar-ex1-collapse">
+    47:         <ul class="nav navbar-nav">
+    48:           <% (RailsExceptionHandlerAdmin::ErrorMessage.uniq.pluck(:app_name) || []).each do |app| %>
+    49:             <li class="<%= params[:app] == app ? 'active' : '' %>"><%= link_to app, rails_exception_handler_admin.error_messages_path(app: app) %></li>
+    50:           <% end %>
+    51:         </ul>
+  /Users/matt/sidework/rails_exception_handler_admin/app/views/layouts/rails_exception_handler_admin/application.html.erb:48:in `___sers_matt_sidework_rails_exception_handler_admin_app_views_layouts_rails_exception_handler_admin_application_html_erb__23599476383054449_70188388211020'
+  actionpack (3.2.14) lib/action_view/template.rb:145:in `block in render'
+  activesupport (3.2.14) lib/active_support/notifications.rb:125:in `instrument'
+  actionpack (3.2.14) lib/action_view/template.rb:143:in `render'
+  actionpack (3.2.14) lib/action_view/renderer/template_renderer.rb:60:in `render_with_layout'
+  actionpack (3.2.14) lib/action_view/renderer/template_renderer.rb:46:in `render_template'
+  actionpack (3.2.14) lib/action_view/renderer/template_renderer.rb:19:in `render'
+  actionpack (3.2.14) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.14) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.14) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.14) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.14) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.14) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.14) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.14) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.14) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.14) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.14) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.14) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.14) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.14) lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+  /Users/matt/sidework/rails_exception_handler_admin/app/controllers/rails_exception_handler_admin/error_messages_controller.rb:23:in `index'
+  actionpack (3.2.14) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.2.14) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.14) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:403:in `_run__3224574674918458250__process_action__822438191701362683__callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.14) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.14) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.14) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.14) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.14) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.14) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.14) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.14) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/railtie/configurable.rb:30:in `method_missing'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  mongoid (3.1.6) lib/rack/mongoid/middleware/identity_map.rb:34:in `block in call'
+  mongoid (3.1.6) lib/mongoid/unit_of_work.rb:39:in `unit_of_work'
+  mongoid (3.1.6) lib/rack/mongoid/middleware/identity_map.rb:34:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.14) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.14) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `_run__4323808043470551677__call__1099971144879590008__callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.14) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.14) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.6ms)
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.4ms)
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.6ms)
+
+
+Started GET "/rails_exception_handler_admin/error_messages" for 127.0.0.1 at 2014-01-25 02:04:11 -0500
+Processing by RailsExceptionHandlerAdmin::ErrorMessagesController#index as HTML
+  [1m[35mRailsExceptionHandler::ActiveRecord::ErrorMessage Load (0.1ms)[0m  SELECT "error_messages".* FROM "error_messages" ORDER BY created_at DESC
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.4890ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=exception_database collection=error_message selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.1867ms)
+  Rendered /Users/matt/sidework/rails_exception_handler_admin/app/views/rails_exception_handler_admin/error_messages/index.html.erb within layouts/rails_exception_handler_admin/application (2.8ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT DISTINCT "error_messages"."app_name" FROM "error_messages" [0m
+  MOPED: 127.0.0.1:27017 COMMAND      database=exception_database command={:distinct=>"error_message", :key=>"app_name", :query=>{}} (0.2789ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/application.css?body=1" for 127.0.0.1 at 2014-01-25 02:04:11 -0500
+Served asset /rails_exception_handler_admin/application.css - 200 OK (13ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-01-25 02:04:11 -0500
+Served asset /rails_exception_handler_admin/bootstrap.min.css - 200 OK (1ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/error_messages.css?body=1" for 127.0.0.1 at 2014-01-25 02:04:11 -0500
+Served asset /rails_exception_handler_admin/error_messages.css - 200 OK (1ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/application.js?body=1" for 127.0.0.1 at 2014-01-25 02:04:11 -0500
+Served asset /rails_exception_handler_admin/application.js - 200 OK (2ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/error_messages.js?body=1" for 127.0.0.1 at 2014-01-25 02:04:11 -0500
+Served asset /rails_exception_handler_admin/error_messages.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-25 02:04:11 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-25 02:04:11 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2014-01-25 02:04:11 -0500
+Served asset /favicon.ico - 404 Not Found (0ms)
+
+ActionController::RoutingError (No route matches [GET] "/assets/favicon.ico"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.14) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.3ms)
+
+
+Started GET "/rails_exception_handler_admin/error_messages" for 127.0.0.1 at 2014-01-25 02:04:50 -0500
+Processing by RailsExceptionHandlerAdmin::ErrorMessagesController#index as HTML
+  Rendered /Users/matt/sidework/rails_exception_handler_admin/app/views/rails_exception_handler_admin/error_messages/index.html.erb within layouts/rails_exception_handler_admin/application (0.6ms)
+  [1m[35m (0.1ms)[0m  SELECT DISTINCT "error_messages"."app_name" FROM "error_messages" 
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5531ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=exception_database command={:distinct=>"error_message", :key=>"app_name", :query=>{}} (0.2341ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/application.css?body=1" for 127.0.0.1 at 2014-01-25 02:04:50 -0500
+Served asset /rails_exception_handler_admin/application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/error_messages.css?body=1" for 127.0.0.1 at 2014-01-25 02:04:50 -0500
+Served asset /rails_exception_handler_admin/error_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-25 02:04:50 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-25 02:04:50 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-01-25 02:04:50 -0500
+Served asset /rails_exception_handler_admin/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/error_messages.js?body=1" for 127.0.0.1 at 2014-01-25 02:04:50 -0500
+Served asset /rails_exception_handler_admin/error_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/application.js?body=1" for 127.0.0.1 at 2014-01-25 02:04:50 -0500
+Served asset /rails_exception_handler_admin/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/rails_exception_handler_admin/error_messages" for 127.0.0.1 at 2014-01-25 02:05:03 -0500
+Processing by RailsExceptionHandlerAdmin::ErrorMessagesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "error_messages" [0m
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5579ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=exception_database collection=error_message selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.2079ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=exception_database collection=error_message selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[:slave_ok] limit=0 skip=0 batch_size=nil fields=nil (0.1512ms)
+  Rendered /Users/matt/sidework/rails_exception_handler_admin/app/views/rails_exception_handler_admin/error_messages/index.html.erb within layouts/rails_exception_handler_admin/application (3.1ms)
+  [1m[35m (0.1ms)[0m  SELECT DISTINCT "error_messages"."app_name" FROM "error_messages" 
+  MOPED: 127.0.0.1:27017 COMMAND      database=exception_database command={:distinct=>"error_message", :key=>"app_name", :query=>{}} (0.2422ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/application.css?body=1" for 127.0.0.1 at 2014-01-25 02:05:03 -0500
+Served asset /rails_exception_handler_admin/application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-25 02:05:03 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-01-25 02:05:03 -0500
+Served asset /rails_exception_handler_admin/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-25 02:05:03 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/error_messages.css?body=1" for 127.0.0.1 at 2014-01-25 02:05:03 -0500
+Served asset /rails_exception_handler_admin/error_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/error_messages.js?body=1" for 127.0.0.1 at 2014-01-25 02:05:03 -0500
+Served asset /rails_exception_handler_admin/error_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/application.js?body=1" for 127.0.0.1 at 2014-01-25 02:05:03 -0500
+Served asset /rails_exception_handler_admin/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/rails_exception_handler_admin/error_messages" for 127.0.0.1 at 2014-01-25 02:05:09 -0500
+Processing by RailsExceptionHandlerAdmin::ErrorMessagesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "error_messages" [0m
+  [1m[35mRailsExceptionHandler::ActiveRecord::ErrorMessage Load (0.1ms)[0m  SELECT "error_messages".* FROM "error_messages" ORDER BY created_at DESC
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5908ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=exception_database collection=error_message selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.1960ms)
+  Rendered /Users/matt/sidework/rails_exception_handler_admin/app/views/rails_exception_handler_admin/error_messages/index.html.erb within layouts/rails_exception_handler_admin/application (4.0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT DISTINCT "error_messages"."app_name" FROM "error_messages" [0m
+  MOPED: 127.0.0.1:27017 COMMAND      database=exception_database command={:distinct=>"error_message", :key=>"app_name", :query=>{}} (0.2067ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-01-25 02:05:09 -0500
+Served asset /rails_exception_handler_admin/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-25 02:05:09 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/error_messages.css?body=1" for 127.0.0.1 at 2014-01-25 02:05:09 -0500
+Served asset /rails_exception_handler_admin/error_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-25 02:05:09 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/application.css?body=1" for 127.0.0.1 at 2014-01-25 02:05:09 -0500
+Served asset /rails_exception_handler_admin/application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/error_messages.js?body=1" for 127.0.0.1 at 2014-01-25 02:05:09 -0500
+Served asset /rails_exception_handler_admin/error_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/application.js?body=1" for 127.0.0.1 at 2014-01-25 02:05:09 -0500
+Served asset /rails_exception_handler_admin/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/rails_exception_handler_admin/error_messages/1" for 127.0.0.1 at 2014-01-25 02:05:28 -0500
+Processing by RailsExceptionHandlerAdmin::ErrorMessagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRailsExceptionHandler::ActiveRecord::ErrorMessage Load (0.2ms)[0m  SELECT "error_messages".* FROM "error_messages" WHERE "error_messages"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered /Users/matt/sidework/rails_exception_handler_admin/app/views/rails_exception_handler_admin/error_messages/show.html.erb within layouts/rails_exception_handler_admin/application (1.2ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT DISTINCT "error_messages"."app_name" FROM "error_messages" [0m
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5698ms)
+  MOPED: 127.0.0.1:27017 COMMAND      database=exception_database command={:distinct=>"error_message", :key=>"app_name", :query=>{}} (0.1948ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/application.css?body=1" for 127.0.0.1 at 2014-01-25 02:05:28 -0500
+Served asset /rails_exception_handler_admin/application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-25 02:05:28 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-01-25 02:05:28 -0500
+Served asset /rails_exception_handler_admin/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/error_messages.css?body=1" for 127.0.0.1 at 2014-01-25 02:05:28 -0500
+Served asset /rails_exception_handler_admin/error_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/error_messages.js?body=1" for 127.0.0.1 at 2014-01-25 02:05:28 -0500
+Served asset /rails_exception_handler_admin/error_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-25 02:05:28 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/application.js?body=1" for 127.0.0.1 at 2014-01-25 02:05:28 -0500
+Served asset /rails_exception_handler_admin/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/rails_exception_handler_admin/error_messages" for 127.0.0.1 at 2014-01-25 02:05:32 -0500
+Processing by RailsExceptionHandlerAdmin::ErrorMessagesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "error_messages" 
+  [1m[36mRailsExceptionHandler::ActiveRecord::ErrorMessage Load (0.1ms)[0m  [1mSELECT "error_messages".* FROM "error_messages" ORDER BY created_at DESC[0m
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.5651ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=exception_database collection=error_message selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.1981ms)
+  Rendered /Users/matt/sidework/rails_exception_handler_admin/app/views/rails_exception_handler_admin/error_messages/index.html.erb within layouts/rails_exception_handler_admin/application (2.6ms)
+  [1m[35m (0.1ms)[0m  SELECT DISTINCT "error_messages"."app_name" FROM "error_messages" 
+  MOPED: 127.0.0.1:27017 COMMAND      database=exception_database command={:distinct=>"error_message", :key=>"app_name", :query=>{}} (0.2470ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/application.css?body=1" for 127.0.0.1 at 2014-01-25 02:05:32 -0500
+Served asset /rails_exception_handler_admin/application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-25 02:05:32 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/error_messages.css?body=1" for 127.0.0.1 at 2014-01-25 02:05:32 -0500
+Served asset /rails_exception_handler_admin/error_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-01-25 02:05:32 -0500
+Served asset /rails_exception_handler_admin/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/error_messages.js?body=1" for 127.0.0.1 at 2014-01-25 02:05:32 -0500
+Served asset /rails_exception_handler_admin/error_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-25 02:05:32 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/application.js?body=1" for 127.0.0.1 at 2014-01-25 02:05:32 -0500
+Served asset /rails_exception_handler_admin/application.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/rails_exception_handler_admin/error_messages/1" for 127.0.0.1 at 2014-01-25 02:05:34 -0500
+Processing by RailsExceptionHandlerAdmin::ErrorMessagesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jrQEGhJc5VCdzqubxiFf0wU2eKGqXGfL3aRiCDN9S88=", "id"=>"1"}
+  [1m[36mRailsExceptionHandler::ActiveRecord::ErrorMessage Load (0.1ms)[0m  [1mSELECT "error_messages".* FROM "error_messages" WHERE "error_messages"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.4ms)[0m  [1mDELETE FROM "error_messages" WHERE "error_messages"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/rails_exception_handler_admin/error_messages
+Completed 302 Found in 6ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/rails_exception_handler_admin/error_messages" for 127.0.0.1 at 2014-01-25 02:05:34 -0500
+Processing by RailsExceptionHandlerAdmin::ErrorMessagesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "error_messages" [0m
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.4327ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=exception_database collection=error_message selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.2501ms)
+  Rendered /Users/matt/sidework/rails_exception_handler_admin/app/views/rails_exception_handler_admin/error_messages/index.html.erb within layouts/rails_exception_handler_admin/application (1.7ms)
+  [1m[35m (0.1ms)[0m  SELECT DISTINCT "error_messages"."app_name" FROM "error_messages" 
+  MOPED: 127.0.0.1:27017 COMMAND      database=exception_database command={:distinct=>"error_message", :key=>"app_name", :query=>{}} (0.2780ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-01-25 02:05:34 -0500
+Served asset /rails_exception_handler_admin/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-25 02:05:34 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/application.css?body=1" for 127.0.0.1 at 2014-01-25 02:05:34 -0500
+Served asset /rails_exception_handler_admin/application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/error_messages.css?body=1" for 127.0.0.1 at 2014-01-25 02:05:34 -0500
+Served asset /rails_exception_handler_admin/error_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/error_messages.js?body=1" for 127.0.0.1 at 2014-01-25 02:05:34 -0500
+Served asset /rails_exception_handler_admin/error_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-25 02:05:34 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/application.js?body=1" for 127.0.0.1 at 2014-01-25 02:05:34 -0500
+Served asset /rails_exception_handler_admin/application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-25 02:08:43 -0500
+
+ActionController::RoutingError (No route matches [GET] "/"):
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.14) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/matt/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/matt/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/rails_exception_handler_admin/error_messages" for 127.0.0.1 at 2014-01-25 02:10:54 -0500
+Processing by RailsExceptionHandlerAdmin::ErrorMessagesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "error_messages" [0m
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} (0.6740ms)
+  MOPED: 127.0.0.1:27017 QUERY        database=exception_database collection=error_message selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[:slave_ok] limit=1 skip=0 batch_size=nil fields={:_id=>1} (0.2432ms)
+  Rendered /Users/matt/sidework/rails_exception_handler_admin/app/views/rails_exception_handler_admin/error_messages/index.html.erb within layouts/rails_exception_handler_admin/application (2.2ms)
+  [1m[35m (0.1ms)[0m  SELECT DISTINCT "error_messages"."app_name" FROM "error_messages" 
+  MOPED: 127.0.0.1:27017 COMMAND      database=exception_database command={:distinct=>"error_message", :key=>"app_name", :query=>{}} (0.2160ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-25 02:10:54 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/application.css?body=1" for 127.0.0.1 at 2014-01-25 02:10:54 -0500
+Served asset /rails_exception_handler_admin/application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/error_messages.css?body=1" for 127.0.0.1 at 2014-01-25 02:10:54 -0500
+Served asset /rails_exception_handler_admin/error_messages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-25 02:10:54 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-01-25 02:10:54 -0500
+Served asset /rails_exception_handler_admin/bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/error_messages.js?body=1" for 127.0.0.1 at 2014-01-25 02:10:54 -0500
+Served asset /rails_exception_handler_admin/error_messages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails_exception_handler_admin/application.js?body=1" for 127.0.0.1 at 2014-01-25 02:10:54 -0500
+Served asset /rails_exception_handler_admin/application.js - 304 Not Modified (0ms)

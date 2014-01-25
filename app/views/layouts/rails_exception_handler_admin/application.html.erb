@@ -45,8 +45,15 @@
 
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav">
-          <% (RailsExceptionHandlerAdmin::ErrorMessage.uniq.pluck(:app_name) || []).each do |app| %>
-            <li class="<%= params[:app] == app ? 'active' : '' %>"><%= link_to app, rails_exception_handler_admin.error_messages_path(app: app) %></li>
+          <% if defined?(ActiveRecord) %>
+            <% (RailsExceptionHandler::ActiveRecord::ErrorMessage.uniq.pluck(:app_name) || []).each do |app| %>
+              <li class="<%= params[:app] == app ? 'active' : '' %>"><%= link_to app, rails_exception_handler_admin.error_messages_path(app: app) %></li>
+            <% end %>
+          <% end %>
+          <% if defined?(Mongoid) %>
+            <% (RailsExceptionHandler::Mongoid::ErrorMessage.distinct(:app_name) || []).each do |app| %>
+              <li class="<%= params[:app] == app ? 'active' : '' %>"><%= link_to app, rails_exception_handler_admin.error_messages_path(app: app) %></li>
+            <% end %>
           <% end %>
         </ul>
       </div>

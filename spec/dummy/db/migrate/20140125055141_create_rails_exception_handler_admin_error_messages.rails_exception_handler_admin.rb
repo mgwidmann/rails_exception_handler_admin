@@ -1,3 +1,4 @@
+# This migration comes from rails_exception_handler_admin (originally 20130904021511)
 class CreateRailsExceptionHandlerAdminErrorMessages < ActiveRecord::Migration
   def change
     ActiveRecord::Base.establish_connection "exception_database"

@@ -1,42 +1,46 @@
-<div class="page-header">
-  <h1>Errors</h1>
-</div>
-<%= will_paginate(@error_messages) if respond_to?(:will_paginate) %>
-<%= paginate(@error_messages) if respond_to?(:paginate) %>
-<span style="float: right;">
-  <%= link_to 'Resolve All', error_messages_path(app: params[:app]), method: :delete, confirm: "This will permanently remove all records#{params[:app] ? ' for this application'  : ''}. Are you sure?" %>
-</span>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th><%= t('rails_exception_handler.class_name') %></th>
-      <th><%= t('rails_exception_handler.message') %></th>
-      <th><%= t('rails_exception_handler.trace') %></th>
-      <th><%= t('rails_exception_handler.target_url') %></th>
-      <th><%= t('rails_exception_handler.user_info') %></th>
-      <th><%= t('rails_exception_handler.created_at') %></th>
-      <th><%= t('rails_exception_handler.resolve') %></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @error_messages.each do |error_message| %>
-      <tr>
-        <td><%= link_to error_message.class_name, rails_exception_handler_admin.error_message_path(error_message) %></td>
-        <td><%= error_message.message %></td>
-        <td><%= error_message.trace.try(:split, "\n").try(:first).try(:gsub, Regexp.new(/(.*\/)|(?=:\d+:).*/), '') %></td>
-        <td><%= error_message.target_url %></td>
-        <td><%= error_message.user_info %></td>
-        <td><%=l error_message.created_at %></td>
-        <td>
-          <%= link_to t('rails_exception_handler.resolve'),
-                      rails_exception_handler_admin.error_message_path(error_message),
-                      :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                      :class => 'btn btn-mini btn-danger' %>
-        </td>
-      </tr>
+<% {'Active Record' => @ar_error_messages, 'Mongoid' => @mg_error_messages}.each do |type, errors| %>
+    <% if errors.present? %>
+        <div class="page-header">
+          <h1><%= type %> Errors</h1>
+        </div>
+        <%= will_paginate(errors, param_name: "#{type.gsub(/[a-z\W]/, '')}_page") if respond_to?(:will_paginate) %>
+        <%= paginate(errors, param_name: "#{type.gsub(/[a-z\W]/, '')}_page") if respond_to?(:paginate) %>
+        <span style="float: right;">
+          <%= link_to 'Resolve All', error_messages_path(app: params[:app]), method: :delete, confirm: "This will permanently remove all records#{params[:app] ? ' for this application'  : ''}. Are you sure?" %>
+        </span>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th><%= t('rails_exception_handler.class_name') %></th>
+              <th><%= t('rails_exception_handler.message') %></th>
+              <th><%= t('rails_exception_handler.trace') %></th>
+              <th><%= t('rails_exception_handler.target_url') %></th>
+              <th><%= t('rails_exception_handler.user_info') %></th>
+              <th><%= t('rails_exception_handler.created_at') %></th>
+              <th><%= t('rails_exception_handler.resolve') %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% errors.each do |error_message| %>
+              <tr>
+                <td><%= link_to error_message.class_name, rails_exception_handler_admin.error_message_path(error_message) %></td>
+                <td><%= error_message.message %></td>
+                <td><%= error_message.trace.try(:split, "\n").try(:first).try(:gsub, Regexp.new(/(.*\/)|(?=:\d+:).*/), '') %></td>
+                <td><%= error_message.target_url %></td>
+                <td><%= error_message.user_info %></td>
+                <td><%=l error_message.created_at %></td>
+                <td>
+                  <%= link_to t('rails_exception_handler.resolve'),
+                              rails_exception_handler_admin.error_message_path(error_message),
+                              :method => :delete,
+                              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                              :class => 'btn btn-mini btn-danger' %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+        <%= will_paginate(errors, param_name: "#{type.gsub(/[a-z\W]/, '')}_page") if respond_to?(:will_paginate) %>
+        <%= paginate(errors, param_name: "#{type.gsub(/[a-z\W]/, '')}_page") if respond_to?(:paginate) %>
     <% end %>
-  </tbody>
-</table>
-<%= will_paginate(@error_messages) if respond_to?(:will_paginate) %>
-<%= paginate(@error_messages) if respond_to?(:paginate) %>
+<% end %>

@@ -1,0 +1,19 @@
+# Just to make rails happy -- might not even be neccessary
+development:
+  adapter: sqlite3
+  database: db/development.sqlite3
+  pool: 5
+  timeout: 5000
+
+test:
+  adapter: sqlite3
+  database: db/development.sqlite3
+  pool: 5
+  timeout: 5000
+
+# This is the connection which is actually used
+exception_database:
+  adapter: sqlite3
+  database: db/exceptions.sqlite3
+  pool: 5
+  timeout: 5000
