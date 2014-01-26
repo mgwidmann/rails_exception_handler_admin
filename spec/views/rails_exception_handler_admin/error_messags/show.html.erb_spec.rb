@@ -1,17 +1,23 @@
 require 'spec_helper'
 
-describe "posts/show" do
-  before(:each) do
-    @post = assign(:post, stub_model(Post,
-      :title => "Title",
-      :published => false
-    ))
+describe 'rails_exception_handler_admin/error_messages/show' do
+
+  before :each do
+    ::RailsExceptionHandler::ActiveRecord::ErrorMessage.destroy_all
+    ::RailsExceptionHandler::Mongoid::ErrorMessage.all.destroy
   end
 
-  it "renders attributes in <p>" do
-    render
-    # Run the generator again with the --webrat flag if you want to use webrat matchers
-    rendered.should match(/Title/)
-    rendered.should match(/false/)
+  helper RailsExceptionHandlerAdmin::Engine.routes.url_helpers
+
+  before :each do
+    @error_message = create(:ar_error_message)
   end
+
+  it 'renders the error message' do
+    render
+    rendered.should include('ActiveRecordTestClass')
+    rendered.should include("{:parameter =&gt; &#x27;value&#x27;}")
+    rendered.should include("Unable to find local variable or method &quot;test&quot;")
+  end
+
 end

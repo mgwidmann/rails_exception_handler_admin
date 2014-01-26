@@ -24,8 +24,8 @@ module RailsExceptionHandlerAdmin
     routes { RailsExceptionHandlerAdmin::Engine.routes }
 
     before :each do
-      ::RailsExceptionHandler::ActiveRecord::ErrorMessage.destroy_all if defined?(ActiveRecord)
-      ::RailsExceptionHandler::Mongoid::ErrorMessage.all.destroy if defined?(Mongoid)
+      ::RailsExceptionHandler::ActiveRecord::ErrorMessage.destroy_all
+      ::RailsExceptionHandler::Mongoid::ErrorMessage.all.destroy
     end
 
     describe "GET index" do
@@ -64,61 +64,38 @@ module RailsExceptionHandlerAdmin
       end
     end
 
-    describe "PUT update" do
-      describe "with valid params" do
-        it "updates the requested error_message" do
-          error_message = ErrorMessage.create! valid_attributes
-          # Assuming there are no other error_messages in the database, this
-          # specifies that the ErrorMessage created on the previous line
-          # receives the :update_attributes message with whatever params are
-          # submitted in the request.
-          ErrorMessage.any_instance.should_receive(:update).with({ "title" => "MyString" })
-          put :update, {:id => error_message.to_param, :error_message => { "title" => "MyString" }}, valid_session
-        end
-
-        it "assigns the requested error_message as @error_message" do
-          error_message = ErrorMessage.create! valid_attributes
-          put :update, {:id => error_message.to_param, :error_message => valid_attributes}, valid_session
-          assigns(:error_message).should eq(error_message)
-        end
-
-        it "redirects to the error_message" do
-          error_message = ErrorMessage.create! valid_attributes
-          put :update, {:id => error_message.to_param, :error_message => valid_attributes}, valid_session
-          response.should redirect_to(error_message)
-        end
-      end
-
-      describe "with invalid params" do
-        it "assigns the error_message as @error_message" do
-          error_message = ErrorMessage.create! valid_attributes
-          # Trigger the behavior that occurs when invalid params are submitted
-          ErrorMessage.any_instance.stub(:save).and_return(false)
-          put :update, {:id => error_message.to_param, :error_message => { "title" => "invalid value" }}, valid_session
-          assigns(:error_message).should eq(error_message)
-        end
-
-        it "re-renders the 'edit' template" do
-          error_message = ErrorMessage.create! valid_attributes
-          # Trigger the behavior that occurs when invalid params are submitted
-          ErrorMessage.any_instance.stub(:save).and_return(false)
-          put :update, {:id => error_message.to_param, :error_message => { "title" => "invalid value" }}, valid_session
-          response.should render_template("edit")
-        end
-      end
-    end
-
     describe "DELETE destroy" do
-      it "destroys the requested error_message" do
-        error_message = ErrorMessage.create! valid_attributes
+      it "destroys the requested active record error_message" do
+        error_message = create(:ar_error_message)
+        mg_error_message = create(:mg_error_message)
         expect {
-          delete :destroy, {:id => error_message.to_param}, valid_session
-        }.to change(ErrorMessage, :count).by(-1)
+          delete :destroy, {:id => error_message.to_param}
+        }.to change(::RailsExceptionHandler::ActiveRecord::ErrorMessage, :count).by(-1)
+        expect { ::RailsExceptionHandler::ActiveRecord::ErrorMessage.find(error_message.id) }.to raise_error
+        expect { ::RailsExceptionHandler::Mongoid::ErrorMessage.find(mg_error_message.id) }.not_to raise_error
       end
 
-      it "redirects to the error_messages list" do
-        error_message = ErrorMessage.create! valid_attributes
-        delete :destroy, {:id => error_message.to_param}, valid_session
+      it "destroys the requested mongoid error_message" do
+        error_message = create(:mg_error_message)
+        ar_error_message = create(:ar_error_message)
+        expect {
+          delete :destroy, {:id => error_message.to_param}
+        }.to change(::RailsExceptionHandler::Mongoid::ErrorMessage, :count).by(-1)
+        expect { ::RailsExceptionHandler::Mongoid::ErrorMessage.find(error_message.id) }.to raise_error
+        expect { ::RailsExceptionHandler::ActiveRecord::ErrorMessage.find(ar_error_message.id) }.not_to raise_error
+      end
+
+      it "an active record, redirects to the error_messages list" do
+        ar_error_message = create(:ar_error_message)
+        mg_error_message = create(:mg_error_message)
+        delete :destroy, {:id => ar_error_message.to_param}
+        response.should redirect_to(error_messages_url)
+      end
+
+      it "an mongoid, redirects to the error_messages list" do
+        ar_error_message = create(:ar_error_message)
+        mg_error_message = create(:mg_error_message)
+        delete :destroy, {:id => mg_error_message.to_param}
         response.should redirect_to(error_messages_url)
       end
     end
