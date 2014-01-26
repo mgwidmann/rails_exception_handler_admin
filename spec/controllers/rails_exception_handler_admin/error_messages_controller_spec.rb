@@ -21,92 +21,46 @@ require 'spec_helper'
 module RailsExceptionHandlerAdmin
   describe ErrorMessagesController do
 
-    # This should return the minimal set of attributes required to create a valid
-    # ErrorMessage. As you add validations to ErrorMessage, be sure to
-    # adjust the attributes here as well.
-    let(:valid_attributes) {
-      {class_name: 'TestClass',
-        message: "Unable to find local variable or method \"test\"",
-        trace: "file1.rb:20\nfile2.rb:10\nfile3.rb:39",
-        params: "{:parameter => 'value'}",
-        target_url: 'http://localhost:3000/test',
-        referer_url: 'http://localhost:3000',
-        user_agent: 'TestAgent',
-        user_info: 'User Name',
-        app_name: 'Test App',
-        doc_root: '/var/www/testapp'}
-    }
+    routes { RailsExceptionHandlerAdmin::Engine.routes }
 
-    # This should return the minimal set of values that should be in the session
-    # in order to pass any filters (e.g. authentication) defined in
-    # ErrorMessagesController. Be sure to keep this updated too.
-    let(:valid_session) { {} }
+    before :each do
+      ::RailsExceptionHandler::ActiveRecord::ErrorMessage.destroy_all if defined?(ActiveRecord)
+      ::RailsExceptionHandler::Mongoid::ErrorMessage.all.destroy if defined?(Mongoid)
+    end
 
     describe "GET index" do
-      it "assigns all error_messages as @error_messages" do
-        error_message = ::RailsExceptionHandler::ActiveRecord::ErrorMessage.create! valid_attributes
-        get :index, {}, valid_session
-        assigns(:error_messages).should eq([error_message])
+      it "assigns all active record error_messages as @ar_error_messages" do
+        error_message = create(:ar_error_message)
+        get :index
+        assigns(:ar_error_messages).should eq([error_message])
+      end
+
+      it "assigns all mongoid error_messages as @mg_error_messages" do
+        error_message = create(:mg_error_message)
+        get :index
+        assigns(:mg_error_messages).should eq([error_message])
+      end
+
+      it "assigns both active record and mongoid error_messages as @ar_error_messages and @mg_error_messages" do
+        ar_error_message = create(:ar_error_message)
+        mg_error_message = create(:mg_error_message)
+        get :index
+        assigns(:ar_error_messages).should eq([ar_error_message])
+        assigns(:mg_error_messages).should eq([mg_error_message])
       end
     end
 
     describe "GET show" do
-      it "assigns the requested error_message as @error_message" do
-        error_message = ErrorMessage.create! valid_attributes
-        get :show, {:id => error_message.to_param}, valid_session
+      it "assigns the requested active record error_message as @error_message" do
+        error_message = create(:ar_error_message)
+        get :show, {:id => error_message.to_param}
         assigns(:error_message).should eq(error_message)
       end
-    end
 
-    describe "GET new" do
-      it "assigns a new error_message as @error_message" do
-        get :new, {}, valid_session
-        assigns(:error_message).should be_a_new(ErrorMessage)
-      end
-    end
-
-    describe "GET edit" do
-      it "assigns the requested error_message as @error_message" do
-        error_message = ErrorMessage.create! valid_attributes
-        get :edit, {:id => error_message.to_param}, valid_session
+      it "assigns the requested mongoid error_message as @error_message" do
+        error_message = create(:mg_error_message)
+        get :show, {:id => error_message.to_param}
         assigns(:error_message).should eq(error_message)
-      end
-    end
-
-    describe "POST create" do
-      describe "with valid params" do
-        it "creates a new ErrorMessage" do
-          expect {
-            error_message :create, {:error_message => valid_attributes}, valid_session
-          }.to change(ErrorMessage, :count).by(1)
-        end
-
-        it "assigns a newly created error_message as @error_message" do
-          error_message :create, {:error_message => valid_attributes}, valid_session
-          assigns(:error_message).should be_a(ErrorMessage)
-          assigns(:error_message).should be_persisted
-        end
-
-        it "redirects to the created error_message" do
-          error_message :create, {:error_message => valid_attributes}, valid_session
-          response.should redirect_to(ErrorMessage.last)
-        end
-      end
-
-      describe "with invalid params" do
-        it "assigns a newly created but unsaved error_message as @error_message" do
-          # Trigger the behavior that occurs when invalid params are submitted
-          ErrorMessage.any_instance.stub(:save).and_return(false)
-          error_message :create, {:error_message => { "title" => "invalid value" }}, valid_session
-          assigns(:error_message).should be_a_new(ErrorMessage)
-        end
-
-        it "re-renders the 'new' template" do
-          # Trigger the behavior that occurs when invalid params are submitted
-          ErrorMessage.any_instance.stub(:save).and_return(false)
-          error_message :create, {:error_message => { "title" => "invalid value" }}, valid_session
-          response.should render_template("new")
-        end
       end
     end
 

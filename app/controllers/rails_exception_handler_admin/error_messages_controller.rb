@@ -44,20 +44,6 @@ module RailsExceptionHandlerAdmin
       end
     end
 
-    # PUT /error_messages/1
-    # PUT /error_messages/1.json
-    def update
-      respond_to do |format|
-        if @error_message.update_attributes(params[:error_message])
-          format.html { redirect_to @error_message, notice: 'Error message was successfully updated.' }
-          format.json { head :no_content }
-        else
-          format.html { render action: "edit" }
-          format.json { render json: @error_message.errors, status: :unprocessable_entity }
-        end
-      end
-    end
-
     # DELETE /error_messages/1
     # DELETE /error_messages/1.json
     def destroy
@@ -81,9 +67,9 @@ module RailsExceptionHandlerAdmin
       end
       if defined?(Mongoid)
         if params[:app]
-          RailsExceptionHandler::ActiveRecord::ErrorMessage.where(app_name: params[:app]).destroy
+          RailsExceptionHandler::Mongoid::ErrorMessage.where(app_name: params[:app]).destroy
         else
-          ErrorMessage.destroy
+          RailsExceptionHandler::Mongoid::ErrorMessage.all.destroy
         end
       end
 
