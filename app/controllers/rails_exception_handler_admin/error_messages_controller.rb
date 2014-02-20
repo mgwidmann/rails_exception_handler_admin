@@ -60,9 +60,9 @@ module RailsExceptionHandlerAdmin
     def destroy_all
       if defined?(ActiveRecord)
         if params[:app]
-          ErrorMessage.destroy_all(app_name: params[:app])
+          RailsExceptionHandler::ActiveRecord::ErrorMessage.destroy_all(app_name: params[:app])
         else
-          ErrorMessage.destroy_all
+          RailsExceptionHandler::ActiveRecord::ErrorMessage.destroy_all
         end
       end
       if defined?(Mongoid)
